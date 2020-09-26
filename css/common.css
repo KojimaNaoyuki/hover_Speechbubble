@@ -1,0 +1,71 @@
+body {
+  margin: 0;
+}
+
+body h1, body h2, body h3 {
+  margin: 0;
+}
+
+header {
+  background-color: #afeeee;
+  line-height: 50px;
+  height: 50px;
+}
+
+header ul {
+  margin: 0;
+  list-style: none;
+}
+
+header ul li {
+  margin: 0 40px;
+  float: left;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+header ul li:hover {
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  color: yellowgreen;
+}
+
+header #home:hover + #home_about {
+  display: block;
+}
+
+header #news:hover + #news_about {
+  display: block;
+}
+
+header #about:hover + #about_about {
+  display: block;
+}
+
+header #home_about, header #news_about, header #about_about {
+  position: absolute;
+  color: white;
+  top: 60px;
+  left: 40px;
+  display: none;
+  width: 60%;
+  height: 100px;
+  clear: both;
+  background-color: gray;
+  border-radius: 20px;
+}
+
+header #home_about h3, header #home_about p, header #news_about h3, header #news_about p, header #about_about h3, header #about_about p {
+  margin: 0 40px;
+}
+
+header #news_about {
+  top: 60px;
+  left: 180px;
+}
+
+header #about_about {
+  top: 60px;
+  left: 320px;
+}
+/*# sourceMappingURL=common.css.map */

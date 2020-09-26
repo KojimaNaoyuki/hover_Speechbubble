@@ -1,0 +1,66 @@
+// ～ + tg はセレクターの隣の要素のtgがセレクトされている
+
+body {
+    margin: 0;
+    h1, h2, h3 {
+        margin: 0;
+    }
+}
+
+header {
+    background-color: #afeeee;
+    line-height: 50px;
+    height: 50px;
+    ul {
+        margin: 0;
+        list-style: none;
+        li {
+            margin: 0 40px;
+            float: left;
+            font-weight: bold;
+            cursor: pointer;
+            &:hover {
+                transition: all 0.2s;
+                color: yellowgreen;
+            }
+        }
+    }
+    #home {
+        &:hover + #home_about {
+            display: block;
+        }
+    }
+    #news {
+        &:hover + #news_about {
+            display: block;
+        }
+    }
+    #about {
+        &:hover + #about_about {
+            display: block;
+        }
+    }
+    #home_about, #news_about, #about_about {
+        position: absolute;
+        color: white;
+        top: 60px;
+        left: 40px;
+        display: none;
+        width: 60%;
+        height: 100px;
+        clear: both;
+        background-color: gray;
+        border-radius: 20px;
+        h3, p {
+            margin: 0 40px;
+        }
+    }
+    #news_about {
+        top: 60px;
+        left: 180px;
+    }
+    #about_about {
+        top: 60px;
+        left: 320px;
+    }
+}
